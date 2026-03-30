@@ -20,23 +20,34 @@ package fi.viikko2.task01;
 
 public class Person {
 
+    private String name;
+    private int age;
 
+    public Person (String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public Person (String name) {
+        this.name = name;
+        this.age = 0;
+    }
 
-
+    int birthday() {
+        this.age++;
+        return this.age;
+    }
    
-
 @Override
 public String toString() {
     //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
-    throw new UnsupportedOperationException("TODO: implement toString()");
-
+    return String.format("%s (%d)", this.name, this.age);
 }
 
 @Override
 public boolean equals(Object o) {
     //  Toteuta equals. Kun olet valmis, POISTA alla oleva rivi.
-    throw new UnsupportedOperationException("TODO: implement equals(Object)");
-
+    java.util.Objects.equals(name, name);
+    return this.name == this.name;
 }
 
 }
