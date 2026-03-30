@@ -31,7 +31,7 @@ public class MathUtil {
         }
         return sum;
     }
-    public static double summa(double[] arr) {
+    public static double sum(double[] arr) {
         double sum = 0.0;
         for (double d : arr) {
             sum += d;

@@ -20,7 +20,7 @@ public class Main {
         int[] a = {1,2,3};
         double[] b = {1.5,2.5,3.0};
         System.out.println(MathUtil.sum(a));
-        System.out.println(MathUtil.summa(b));
+        System.out.println(MathUtil.sum(b));
         System.out.println(MathUtil.max(a));
         System.out.println(MathUtil.min(a));
     }
