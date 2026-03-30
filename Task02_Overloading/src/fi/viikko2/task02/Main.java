@@ -19,7 +19,7 @@ public class Main {
     public static void main(String[] args) {
         int[] a = {1,2,3};
         double[] b = {1.5,2.5,3.0};
-        System.out.println(MathUtil.placeholderInt());
-        System.out.println(MathUtil.placeholderDouble());
+        System.out.println(MathUtil.sum(a));
+        System.out.println(MathUtil.summa(b));
     }
 }
