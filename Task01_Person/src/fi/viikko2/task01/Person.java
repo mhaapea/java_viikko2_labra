@@ -47,7 +47,8 @@ public String toString() {
 public boolean equals(Object o) {
     //  Toteuta equals. Kun olet valmis, POISTA alla oleva rivi.
     java.util.Objects.equals(name, name);
-    return this.name == this.name;
+    java.util.Objects.equals(age, age);
+    return this.name == this.name && this.age == this.age;
 }
 
 }
