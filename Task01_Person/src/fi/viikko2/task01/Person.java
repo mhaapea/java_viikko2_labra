@@ -18,6 +18,8 @@
 
 package fi.viikko2.task01;
 
+import java.util.Objects;
+
 public class Person {
 
     private String name;
@@ -45,10 +47,8 @@ public String toString() {
 
 @Override
 public boolean equals(Object o) {
-    //  Toteuta equals. Kun olet valmis, POISTA alla oleva rivi.
-    java.util.Objects.equals(name, name);
-    java.util.Objects.equals(age, age);
-    return this.name == this.name && this.age == this.age;
+    Person other = (Person) o;
+    return Objects.equals(this.name, other.name) && this.age == other.age;
 }
 
 }
