@@ -18,19 +18,49 @@
 package fi.viikko2.task03;
 
 public class BankAccount {
-   
 
+   String accountNumber;
+   double balance;
 
+    public BankAccount(String accountNumber, double initialBalance) {
+
+        this.accountNumber = accountNumber;
+
+        if (initialBalance < 0.0) {
+            this.balance = 0.0;
+        }
+        else {
+            this.balance = initialBalance;
+        }
+        }
+
+        double deposit(double amount) {
+            balance += amount;
+            return balance;
+        }
+        double withdraw(double amount) {
+            if (amount > balance) {
+                balance = 0.0;
+                return balance;
+            } else {
+                balance -= amount;
+                return balance;
+            }
+        }
+        public double getBalance() {
+            return balance;
+        }
 
     @Override
     public String toString(){
         //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
-        throw new UnsupportedOperationException("TODO: implement toString()");
+        return String.format("%s: %.2f", this.accountNumber, this.balance);
     }
 
     @Override
     public boolean equals(Object o){
         //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
-        throw new UnsupportedOperationException("TODO: implement equals(Object)");
+        BankAccount other = (BankAccount) o;
+        return this.accountNumber.equals(other.accountNumber);
     }
 }
